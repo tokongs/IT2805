@@ -1,0 +1,7 @@
+1. The inline style overides the rules described in the stylesheet because in CSS inline style takes is
+higher up in the heirarchy than external stylesheets.(Inline is at the top of the heirarchy)
+2. You should use the class keyword when multiple elements share the same style and id when adressing a single element
+3. RGBA stands for red green blue and alpha. The alpha channel is for opacity so you can use RGBA for transparent or semi-transparent colors.
+4. We include the css stylesheet in the head element because it is not part of the actual page structure it's more like meta data and not something rendered
+to the screen.
+5. article > p matches the all the p elements that are children of article elements
