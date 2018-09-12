@@ -1,0 +1,4 @@
+
+1) The difference between positon:absolute and positoin:fixed is that absolute positons
+the element relative to the ancestor nearest to itself that is also positioned, while fixed positions the element relative to the viewport.
+2) To access to 3rd element within another element you can do this: element1 > element2:nth-child(3)
