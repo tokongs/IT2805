@@ -1,3 +1,3 @@
 1) Mobile devices usually ignore the autoplay feature because of bandwidth and battery concerns.
-2) It will not display the logo because the width is less than 1024px
+2) It will not change anything because the display sixe is not between 768 and 1024.
 3) It follows the DRY principle so you don't have to write and maintain multiple copies of almost the same page
