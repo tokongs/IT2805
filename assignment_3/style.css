@@ -8,10 +8,14 @@ li{
 	list-style-type: square;
 }
 
-li:last-child{
-	list-style-type: space;
-	color: violet;
 
+.no_bullet{
+  list-style-type: none;
+}
+
+.no_bullet li:last-child{
+  list-style-type: space;
+  color: violet;
 }
 /* Part 4 */
 
