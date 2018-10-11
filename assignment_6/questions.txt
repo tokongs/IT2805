@@ -1,0 +1,5 @@
+1) 0.1 + 0.2 === 0.3 evaluates to false because floating point arithmetic is not 100% acurate
+2) method specifies whether a form should use GET or POST
+3) This is because usese the URL to send values in key value pairs
+4) It is considered bad practie because its run on the front end, which means the user can modify it.
+5) A textarea should be used when you may have multiple lines of text.
