@@ -4,9 +4,66 @@
         <title>Tax form</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+            }
+            input{
+                display: block;
+                margin: 2px;
+            }
+            label{
+                margin: 2px;
+            }
+            form{
+                margin: auto;
+                display: inline;
+            }
+
+        </style>
+
+        <script>
+            function calc_tax(){
+                let income = document.getElementById("income").value;
+                let wealth = document.getElementById("wealth").value;
+
+                tax = (0.35*income) + (0.25*wealth);
+
+                document.getElementById("tax").value = tax;
+            }
+        </script>
     </head>
     <body>
         <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+            <label for="name">Real name</label>
+            <input name="name" id="name"type="text" required>
+            <label>Gender</label> 
+            <fieldset id="gender" style="border:none" required>
+                <input name="gender" type="radio" id="male" value="Male"  style="display:inline"  required>
+                <label for="male">Male</label>                
+                <input name="gender" type="radio" id="female" value="Female" style="display:inline" required>
+                <label for="female">Female</label>
+            </fieldset>
+            <label for="email">E-mail</label>
+            <input name ="email" type="email" required>
+            <label for="birthdate">Birthdate</label>
+            <input name="birthdate" type="date" max="1987-12-31" required>
+            <label for="hero">Hero name</label>
+            <input name="hero" type="text" required>
+            <label for="spandex">Do you wear spandex?</label>
+            <input name="spandex" type="checkbox">
+            <label for="strength">Strength</label>
+            <input name="strength" type="number" max="10" min="1" required>
+            <label for="speed">Speed</label>
+            <input name="speed" type="number" max="10" min="1" required>
+            <label for="intelligence">Intelligence</label>
+            <input name="intelligence" type="number" max="10" min="1" required>
+            <label for="income">Income</label>
+            <input name="income" id="income" type=number min="0" onchange="calc_tax()" required>
+            <label for="wealth">Wealth</label>
+            <input name="wealth" id="wealth" type="number" min="0" onchange="calc_tax()" required>
+            <label for="tax">Tax</label>
+            <input name="tax" id="tax" type="number" disabled>
+            <input name="submit" type="submit" value="Submit Tax Form">
 
         </form>
     </body>
